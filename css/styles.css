@@ -11,14 +11,55 @@ body {
   color: #333;
 }
 
-header {
-  background-color: #333;
-  color: #E8B12C;
-  padding: 20px;
-  text-align: center;
+/* ===== HERO HEADER ===== */
+.hero {
+  height: 80vh; /* prend 80% de la hauteur de la fenêtre */
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url('../images/Xenoblade-Banniere.jpg') center/cover no-repeat;
+              url('../images/header-bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
 }
+
+.hero .overlay {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 1.3em;
+  margin-bottom: 25px;
+  color: #eaeaea;
+}
+
+.hero nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.hero nav a:hover {
+  border-color: #fff;
+}
+
+/* Animation d’apparition */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 header nav {
   margin-top: 10px;
 }
