@@ -41,3 +41,22 @@
       - Les genres seront d'abord définit clairement en prenant comme base les premiers jeux les utilisant.<br>
       - Ces genres seront ensuite catégorisés afin d'avoir plus de clarté. exemple : catégorie positionnement de la caméra (first-person, third-person, top-down, etc)<br>
       - Une fois les bases établies, il faut ensuite re-classer tout les jeux avec ce nouveau format. Cela permettra de tester le système et savoir si le contenu des jeux est plus clair." data-en=""></p>
+    <script>
+    let lang = "fr";
+
+document.getElementById("langToggle").addEventListener("click", () => {
+  lang = lang === "fr" ? "en" : "fr";
+  const button = document.getElementById("langToggle");
+  button.textContent = lang === "fr" ? "EN 🇬🇧" : "FR 🇫🇷";
+
+  // Animation du bouton
+  button.style.transform = "scale(0.9)";
+  setTimeout(() => button.style.transform = "scale(1)", 150);
+
+  document.querySelectorAll("[data-fr]").forEach(el => {
+    el.textContent = el.getAttribute(`data-${lang}`);
+  });
+});
+</script>
+  
+</html>
