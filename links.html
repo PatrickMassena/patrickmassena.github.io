@@ -25,3 +25,21 @@
           <button id="langToggle" class="lang-btn">EN 🇬🇧</button>
         </nav>
       </header>
+    <script>
+let lang = "fr";
+
+document.getElementById("langToggle").addEventListener("click", () => {
+  lang = lang === "fr" ? "en" : "fr";
+  const button = document.getElementById("langToggle");
+  button.textContent = lang === "fr" ? "EN 🇬🇧" : "FR 🇫🇷";
+
+  // Animation du bouton
+  button.style.transform = "scale(0.9)";
+  setTimeout(() => button.style.transform = "scale(1)", 150);
+
+  document.querySelectorAll("[data-fr]").forEach(el => {
+    el.textContent = el.getAttribute(`data-${lang}`);
+  });
+});
+</script>
+</html>
