@@ -37,7 +37,10 @@
       Exemple : Le genre MMO (Massively Multiplayer Online) est de nos jours utilisé à tout-va par des dev définissant que leur jeu jouable à 4. Le genre MMO définissait à sa création un monde persistant(serveur) 
       où une ou plusieurs centaines de joueur pouvait ce connecter est joués ensemble.  
       Une des raisons est qu'occupe autorité n'a catégorisé ces genres lors de leur première utilisation. Ma proposition ici consiste à normer tout ces genres." data-en=""></p>
-      <p  data-fr="La méthode utilisé cela celle-ci :<br> - Les genres seront d'abord définit clairement en prenant comme base les premiers jeux les utilisant.<br> - Ces genres seront ensuite catégorisés afin d'avoir plus de clarté. exemple : catégorie positionnement de la caméra (first-person, third-person, top-down, etc)<br> - Une fois les bases établies, il faut ensuite re-classer tout les jeux avec ce nouveau format. Cela permettra de tester le système et savoir si le contenu des jeux est plus clair." data-en=""></p>
+      <p  data-fr="La méthode utilisé cela celle-ci :<br> 
+        - Les genres seront d'abord définit clairement en prenant comme base les premiers jeux les utilisant.<br> 
+        - Ces genres seront ensuite catégorisés afin d'avoir plus de clarté. exemple : catégorie positionnement de la caméra (first-person, third-person, top-down, etc)<br> 
+        - Une fois les bases établies, il faut ensuite re-classer tout les jeux avec ce nouveau format. Cela permettra de tester le système et savoir si le contenu des jeux est plus clair." data-en=""></p>
     <script>
     let lang = "fr";
 
@@ -51,7 +54,7 @@ document.getElementById("langToggle").addEventListener("click", () => {
   setTimeout(() => button.style.transform = "scale(1)", 150);
 
   document.querySelectorAll("[data-fr]").forEach(el => {
-    el.textContent = el.getAttribute(`data-${lang}`);
+    el.innerContent = el.getAttribute(`data-${lang}`);
   });
 });
 </script>
